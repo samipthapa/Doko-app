@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:scrollbars="none"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dokoCard"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#2f302c"
+                app:cardCornerRadius="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/dokoCardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:text="@string/what_s_doko"
+                        android:textAlignment="center"
+                        android:textSize="19sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_below="@id/dokoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:text="@string/doko_description"
+                        android:textColor="@color/white"
+                        tools:ignore="NotSibling" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/clubCard"
+                android:layout_below="@id/dokoCard"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#243f8b">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/trophyImage"
+                        android:padding="5dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/trophy"/>
+
+                    <TextView
+                        android:id="@+id/clubText"
+                        android:layout_toRightOf="@id/trophyImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="45sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_below="@id/clubText"
+                        android:layout_toRightOf="@id/trophyImage"
+                        android:text="CLUBS"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/csitCard"
+                android:layout_below="@id/clubCard"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#006a33">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/csitBatchImage"
+                        android:padding="15dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/batches"/>
+
+                    <TextView
+                        android:id="@+id/csitText"
+                        android:layout_toRightOf="@id/csitBatchImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="50sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_below="@id/csitText"
+                        android:layout_toRightOf="@id/csitBatchImage"
+                        android:text="CSIT BATCHES"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/bcaCard"
+                android:layout_below="@id/csitCard"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#006a33">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/bcaBatchImage"
+                        android:padding="15dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/batches"/>
+
+                    <TextView
+                        android:id="@+id/bcaText"
+                        android:layout_toRightOf="@id/bcaBatchImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textSize="50sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_below="@id/bcaText"
+                        android:layout_toRightOf="@id/bcaBatchImage"
+                        android:text="BCA BATCHES"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_below="@id/bcaCard"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#ed5400">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/studentsImage"
+                        android:padding="15dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/students"/>
+
+                    <TextView
+                        android:id="@+id/studentCount"
+                        android:layout_toRightOf="@id/studentsImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="481"
+                        android:textSize="50sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_below="@id/studentCount"
+                        android:layout_toRightOf="@id/studentsImage"
+                        android:text="TOTAL STUDENTS"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

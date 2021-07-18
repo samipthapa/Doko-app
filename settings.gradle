@@ -1,0 +1,2 @@
+rootProject.name = "Doko"
+include ':app'
