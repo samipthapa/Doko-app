@@ -3,11 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/doko_navigation"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/Home">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.doko.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.doko.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_Home_to_BCA"
+            app:destination="@id/BCA" />
+    </fragment>
+    <fragment
+        android:id="@+id/BCA"
+        android:name="com.example.doko.BCA"
+        android:label="fragment_b_c_a"
+        tools:layout="@layout/fragment_b_c_a" >
+        <action
+            android:id="@+id/action_BCA_to_BCA2022"
+            app:destination="@id/BCA2022" />
+        <action
+            android:id="@+id/action_BCA_to_BCA2023"
+            app:destination="@id/BCA2023" />
+        <action
+            android:id="@+id/action_BCA_to_BCA2024"
+            app:destination="@id/BCA2024" />
+    </fragment>
+    <fragment
+        android:id="@+id/BCA2022"
+        android:name="com.example.doko.BCA2022"
+        android:label="fragment_bca2022"
+        tools:layout="@layout/fragment_bca2022" />
+    <fragment
+        android:id="@+id/BCA2023"
+        android:name="com.example.doko.BCA2023"
+        android:label="fragment_bca2023"
+        tools:layout="@layout/fragment_bca2023" />
+    <fragment
+        android:id="@+id/BCA2024"
+        android:name="com.example.doko.BCA2024"
+        android:label="fragment_bca2024"
+        tools:layout="@layout/fragment_bca2024" />
 </navigation>

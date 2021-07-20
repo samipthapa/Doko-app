@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BCA"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/BCAtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:textColor="#006a33"
+        android:text="BCA"
+        android:textSize="40sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/BCA2022Card"
+        android:layout_below="@id/BCAtext"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#006a33"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class of 2022"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/BCA2023Card"
+        android:layout_below="@id/BCA2022Card"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#006a33"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class of 2023"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/BCA2024Card"
+        android:layout_below="@id/BCA2023Card"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#006a33"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class of 2024"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
