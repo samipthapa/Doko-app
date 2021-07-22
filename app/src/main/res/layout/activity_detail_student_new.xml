@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#eeeeee"
+    android:scrollbars="none"
+    tools:context=".DetailStudentNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/studentNameText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif"
+                android:textSize="27sp"
+                android:textColor="#006a33"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/studentImage2"
+                android:layout_width="225dp"
+                android:layout_height="225dp"
+                android:layout_below="@id/studentNameText2"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/highSchool2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/studentImage2"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="High School"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/highSchoolText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/highSchool2"
+                android:text="High School Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/highSchoolText2"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/hometown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/highSchoolText2"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="Hometown"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/hometownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hometown"
+                android:text="Hometown Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/hometownText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hometownText"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="Goals"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/goalsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goals"
+                android:text="Goals Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/goalsText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goalsText"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="Strength"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/strengthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/strength"
+                android:text="Strength Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/strengthText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/idol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/strengthText"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="Idol"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/idolText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idol"
+                android:text="Idol Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/idolText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idolText"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:text="Quote"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quote"
+                android:text="Quote Text"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/quoteText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

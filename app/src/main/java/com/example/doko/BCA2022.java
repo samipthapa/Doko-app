@@ -71,7 +71,7 @@ public class BCA2022 extends Fragment {
         studentRecView.setAdapter(studentRecyclerViewAdapter);
         studentRecView.setLayoutManager(new GridLayoutManager(context, 2));
 
-        studentRecyclerViewAdapter.setStudents(Utility.getInstance(context).getBatch(1, 7));
+        studentRecyclerViewAdapter.setStudents(Utility.getInstance(context).getBatch(1100, 1122));
         return view;
     }
 }

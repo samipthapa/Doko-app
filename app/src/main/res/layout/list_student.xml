@@ -8,8 +8,8 @@
     android:layout_margin="10dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -20,9 +20,11 @@
 
         <View
             android:layout_width="210dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="#006a33"
-            android:layout_below="@id/imageStudent"/>
+            android:layout_below="@id/imageStudent">
+
+        </View>
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +35,7 @@
             android:textColor="@color/white"
             android:layout_below="@id/imageStudent"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/studentName"/>
     </RelativeLayout>
 

@@ -70,7 +70,7 @@ public class BCA2023 extends Fragment {
         studentRecView.setAdapter(studentRecyclerViewAdapter);
         studentRecView.setLayoutManager(new GridLayoutManager(context, 2));
 
-        studentRecyclerViewAdapter.setStudents(Utility.getInstance(context).getBatch(101, 102));
+        studentRecyclerViewAdapter.setStudents(Utility.getInstance(context).getBatch(1201, 1215));
         return view;
     }
 }

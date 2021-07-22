@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_Home_to_BCA"
             app:destination="@id/BCA" />
+        <action
+            android:id="@+id/action_Home_to_CSIT"
+            app:destination="@id/CSIT" />
     </fragment>
     <fragment
         android:id="@+id/BCA"
@@ -44,4 +47,90 @@
         android:name="com.example.doko.BCA2024"
         android:label="fragment_bca2024"
         tools:layout="@layout/fragment_bca2024" />
+    <fragment
+        android:id="@+id/CSIT"
+        android:name="com.example.doko.CSIT"
+        android:label="fragment_csit"
+        tools:layout="@layout/fragment_csit" >
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2023"
+            app:destination="@id/CSIT2023" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2022"
+            app:destination="@id/CSIT2022" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2021"
+            app:destination="@id/CSIT2021" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2020"
+            app:destination="@id/CSIT2020" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2019"
+            app:destination="@id/CSIT2019" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2018"
+            app:destination="@id/CSIT2018" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2017"
+            app:destination="@id/CSIT2017" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2016"
+            app:destination="@id/CSIT2016" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2015"
+            app:destination="@id/CSIT2015" />
+        <action
+            android:id="@+id/action_CSIT_to_CSIT2024"
+            app:destination="@id/CSIT2024" />
+    </fragment>
+    <fragment
+        android:id="@+id/CSIT2023"
+        android:name="com.example.doko.CSIT2023"
+        android:label="fragment_csit2023"
+        tools:layout="@layout/fragment_csit2023" />
+    <fragment
+        android:id="@+id/CSIT2022"
+        android:name="com.example.doko.CSIT2022"
+        android:label="fragment_csit2022"
+        tools:layout="@layout/fragment_csit2022" />
+    <fragment
+        android:id="@+id/CSIT2021"
+        android:name="com.example.doko.CSIT2021"
+        android:label="fragment_csit2021"
+        tools:layout="@layout/fragment_csit2021" />
+    <fragment
+        android:id="@+id/CSIT2020"
+        android:name="com.example.doko.CSIT2020"
+        android:label="fragment_csit2020"
+        tools:layout="@layout/fragment_csit2020" />
+    <fragment
+        android:id="@+id/CSIT2019"
+        android:name="com.example.doko.CSIT2019"
+        android:label="fragment_csit2019"
+        tools:layout="@layout/fragment_csit2019" />
+    <fragment
+        android:id="@+id/CSIT2018"
+        android:name="com.example.doko.CSIT2018"
+        android:label="fragment_csit2018"
+        tools:layout="@layout/fragment_csit2018" />
+    <fragment
+        android:id="@+id/CSIT2017"
+        android:name="com.example.doko.CSIT2017"
+        android:label="fragment_csit2017"
+        tools:layout="@layout/fragment_csit2017" />
+    <fragment
+        android:id="@+id/CSIT2016"
+        android:name="com.example.doko.CSIT2016"
+        android:label="fragment_csit2016"
+        tools:layout="@layout/fragment_csit2016" />
+    <fragment
+        android:id="@+id/CSIT2015"
+        android:name="com.example.doko.CSIT2015"
+        android:label="fragment_csit2015"
+        tools:layout="@layout/fragment_csit2015" />
+    <fragment
+        android:id="@+id/CSIT2024"
+        android:name="com.example.doko.CSIT2024"
+        android:label="fragment_csit2024"
+        tools:layout="@layout/fragment_csit2024" />
 </navigation>

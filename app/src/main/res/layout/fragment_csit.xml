@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CSIT"
+    android:scrollbars="none"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/CSITtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:textColor="#006a33"
+            android:text="CSIT"
+            android:textSize="40sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2015Card"
+            android:layout_below="@id/CSITtext"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2015"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2016Card"
+            android:layout_below="@id/CSIT2015Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2016"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2017Card"
+            android:layout_below="@id/CSIT2016Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2017"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2018Card"
+            android:layout_below="@id/CSIT2017Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2018"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2019Card"
+            android:layout_below="@id/CSIT2018Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2019"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2020Card"
+            android:layout_below="@id/CSIT2019Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2020"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2021Card"
+            android:layout_below="@id/CSIT2020Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2021"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2022Card"
+            android:layout_below="@id/CSIT2021Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2022"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2023Card"
+            android:layout_below="@id/CSIT2022Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2023"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CSIT2024Card"
+            android:layout_below="@id/CSIT2023Card"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#006a33"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class of 2024"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
