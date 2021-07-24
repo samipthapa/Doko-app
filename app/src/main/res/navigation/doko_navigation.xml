@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_Home_to_CSIT"
             app:destination="@id/CSIT" />
+        <action
+            android:id="@+id/action_Home_to_clubs"
+            app:destination="@id/clubs" />
     </fragment>
     <fragment
         android:id="@+id/BCA"
@@ -133,4 +136,9 @@
         android:name="com.example.doko.CSIT2024"
         android:label="fragment_csit2024"
         tools:layout="@layout/fragment_csit2024" />
+    <fragment
+        android:id="@+id/clubs"
+        android:name="com.example.doko.Clubs"
+        android:label="fragment_clubs"
+        tools:layout="@layout/fragment_clubs" />
 </navigation>

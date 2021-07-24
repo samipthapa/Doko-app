@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class Utility {
     private static final String STUDENTS = "students";
+    private static final String CLUBS = "clubs";
     public static Utility instance;
 
     private SharedPreferences sharedPreferences;
@@ -35,6 +36,13 @@ public class Utility {
         return students;
     }
 
+    public ArrayList<Club> getClubs() {
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<Club>>(){}.getType();
+        ArrayList<Club> clubs = gson.fromJson(sharedPreferences.getString(CLUBS, null), type);
+        return clubs;
+    }
+
     public Utility(Context context) {
         sharedPreferences = context.getSharedPreferences("alternate_db", Context.MODE_PRIVATE);
 
@@ -42,6 +50,7 @@ public class Utility {
         Gson gson = new Gson();
 
         initData();
+        initClubs();
     }
 
     public static synchronized Utility getInstance(Context context) {
@@ -49,6 +58,116 @@ public class Utility {
             instance = new Utility(context);
         }
         return instance;
+    }
+
+    private void initClubs() {
+        ArrayList<Club> clubs = new ArrayList<>();
+        clubs.add(new Club("The Software Club",
+                "The Software Club is responsible for organizing coding competitions. It also contributes in building enterprise level applications for DWIT. It has organized four seasons successful DeerCoders and conducted Deerthon 2014.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/49949913_2022664551159401_1231238575392030720_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=UXACSxVTlv0AX8iDc5J&_nc_ht=scontent.fbwa3-1.fna&oh=9aab54bc22785fb73c09b15184bc5e6f&oe=61201F17"));
+
+        clubs.add(new Club("The Spotlight",
+                "The Spotlight is one of the eleven clubs in DWIT, which is engaged in conducting light-hearted programmes such as talk shows, podcasts and debates. It was started with the intention of getting to know the people we are surrounded by within the Deerwalk premises, but has expanded to guests outside Deerwalk too in about one year of its formation.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t31.18172-8/29664904_929827030519995_2833987359704685416_o.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=MO0_AVY8Ja4AX9NK4ip&_nc_ht=scontent.fbwa3-1.fna&oh=6672345efff902b77bcbe5cd14fbda58&oe=6121504D"));
+
+        clubs.add(new Club("The Documentary and Movie Club",
+                "The documentary and movie club’s sole aim is to be able to provide some form of entertainment as well as information to the students through movies, every two weeks and provide information through documentaries.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/82908911_3228476787169589_4335840678689898496_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=fSyh4ZqO524AX_rbADa&_nc_ht=scontent.fbwa3-1.fna&oh=b6ca2ac2664eb33330f620543faa2a81&oe=6121A712"));
+
+        clubs.add(new Club("The Media Club",
+                "DWIT Media Club, as the name reflects, involves in making quality videos of events going in and around college. Although initiated with the concept of coming up with monthly News Videos, the club has now taken a leap forward, covering fortnightly News Videos and interesting videos of college festivals and events, social welfare and more. So far we have come up with 48 videos. Check out our Youtube Channel to watch them and understand more about the work we do!\n" +
+                        "\n" +
+                        "Roles Defined\n" +
+                        "Media club, at present, has 5 defined roles:\n" +
+                        "\n" +
+                        "Script Writers, who write script for videos, be it narrative script or news script or others.\n" +
+                        "\n" +
+                        "News Readers, who read out the script in front of camera (off camera in case of background scripts). Normally, the script readers are the ones to write the script.\n" +
+                        "\n" +
+                        "Cinematographers, who shoot necessary video clips and pictures. The video clips and pictures are then edited to prepare the final video.\n" +
+                        "\n" +
+                        "Video Editors, who edit the video clips and pictures shot by the Cinematographer so that those appear in a proper sequence and look good in the final video.\n" +
+                        "\n" +
+                        "Managers/Promoters, who schedule time for video development, hold meetings with the members, schedule and organize brainstorming sessions, promote Youtube Channel and Videos.\n" +
+                        "\n" +
+                        "Each individual has a role defined for him/her and works in accordance to it.", "" +
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/49715053_535546783515480_7404319731911491584_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=yEL7bDqgnSgAX_lU9Ok&_nc_ht=scontent.fbwa3-1.fna&oh=8111802069a507e85955c9992c8f8ae0&oe=61218753"));
+
+        clubs.add(new Club("The DeerExpress Club",
+                "The DeerExpress Club is a club that facilitates all the students of DWIT to speak in front of mass easily will full confidence and help in personality development. DeerExpress Club will act as a platform where all students get the opportunity to express themselves. It acts as a showcase for the talent and opinion of the students. Certain events that the DeerExpress Club organizes are:\n" +
+                        "\n" +
+                        "DeerTalk Seasons:\n" +
+                        "\n" +
+                        "DeerTalk is the platform provided by the Deer Express for the students. It is composed of seasons, and each season consists of four different sessions; speech, extempore, debate, and presentation. But now the club has come up with new decision to add a new session excluding presentation session.\n" +
+                        "\n" +
+                        "Champion of Champions:\n" +
+                        "\n" +
+                        "In the Champion of Champions, the winners of DeerTalk seasons are selected to compete against the winners of the DeerTalk program in Deerwalk Services. This is really tough session.\n" +
+                        "\n" +
+                        "Talk Program By Guest Speakers:\n" +
+                        "\n" +
+                        "Talk program by the guest speakers is also conducted by the club. The main aim of conducting this event is motivating and inspiring the students.\n" +
+                        "\n" +
+                        "Deer Chautari Session:\n" +
+                        "\n" +
+                        "Recently three research program have been held by DeerExpress club in the collabration with the Software club. This was conducted under the Deer Chautari Session .\n" +
+                        "\n" +
+                        "Every time we cannot meet our expectations and also our audience’s expectation. We face many challenges\n" +
+                        "\n" +
+                        "Challenges :\n" +
+                        "\n" +
+                        "Sometimes students treat us like we forcefully keep them in the hall and pressurize them to stay quiet. Nobody understands, we are also bounded by certain rules and responsibilities and that is our duty to make the program successful. We have to tell them to stay calm, walking throughout the hall without sitting. We don’t want to be disliked but sometimes students throw their frustration. That time I feel like I lost creating the environment I wanted to.\n" +
+                        "\n" +
+                        "Future Plans :\n" +
+                        "\n" +
+                        "The club has thought of organizing talent show in near future. We have also thought of doing inter-college competition. There is also the plan of bringing the paid guest.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t31.18172-8/28516737_1992268604369243_1295017226125784306_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=XIy5nRjsH5kAX9PqESx&tn=oB2zF3fb6ahkM95u&_nc_ht=scontent.fbwa3-1.fna&oh=68445cb4039ff76705ce523abadf6389&oe=61210741"));
+
+        clubs.add(new Club("The Social Service Club",
+                "The Social Service is one of the active clubs in DWIT established with an aim to involve students of DWIT in social service. It was established in 2013 with a group of people who were interested to contribute to society. The main motto of the club is to make students aware about their social responsibilities. From the establishment phase of the club, it has been trying to help the society through different activities.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/50946107_1662679080498834_3686014768209985536_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=eiRZkJqADmoAX-KU2o0&_nc_ht=scontent.fbwa3-1.fna&oh=68f35a1da758fef2cb61b1e3857660c1&oe=61218613"));
+
+        clubs.add(new Club("The Artistas",
+                "With its name being \"The Artistas\", the club has a lot of creative freedom and can touch upon a lot of areas in the college as well as the school. We believe that imagination if turned to reality brings out amazing artwork where mind calm downs and touches inner peace with colors of life. The club focuses mainly on traditional art along with abstract digital art and designs. The club enthusiastically brings a break in the hustle of life with the vibes of inspiration and creative ideas.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/49191266_393950734676514_5823645215772114944_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=HvHvU07r6oYAX-nnE0-&_nc_ht=scontent.fbwa3-1.fna&oh=65b79c84c99dd11144759ed673f84925&oe=6120CE5F"));
+
+        clubs.add(new Club("The Deerwalk Literature Society",
+                "Connecting Literature with Information Technology\n" +
+                        "\n" +
+                        "DWIT Literature Club comprises of the individuals who love literature. There are no anyboundaries for a specific category that we work on. Poems, drama, puppetry, books, etc. whateverthat falls we go for it, by helping students to showcase themselves.\n" +
+                        "\n" +
+                        "We conduct various programs that influence the people around through literature. Our primarygoal is to give exposure to students so that they explore the best in the field of literature. Webelieve that speaking, writing and way of presenting things matter most in today’s time. Thus, we would call this club is a common package including all those sorts.\n" +
+                        "\n",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.18169-9/17523265_399987127029145_6096733165241921660_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=VyNt7XmwoNgAX9pCaeV&_nc_ht=scontent.fbwa3-1.fna&oh=0e7fae333be6e0d4661a63f2788f7d87&oe=612106FE"));
+
+        clubs.add(new Club("The DWIT News Club",
+                "DWIT News is proud to be Nepal’s first and only online daily completely managed and run by college students. It is registered with the Department of Information Nepal. The company, under the name D.W.I.T News, www.dwitnews.com, is registered with the Office of Company Registrar on 6th May 2016.\n" +
+                        "\n" +
+                        "DWIT News is the biggest club in DWIT with a total of 20 members. The club produces weekly college news video released on its YouTube channel every Friday night. The club regularly produces news articles on college activities and issues and gives a voice to the students through its opinion and editorial columns.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/82329185_1313963488812132_4655997758660935680_n.png?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=iWoSH3fBh4wAX9_LTZ6&_nc_ht=scontent.fbwa3-1.fna&oh=1d2739565e511e06c8ab3f9f4b0e9aa3&oe=61228A81"));
+
+        clubs.add(new Club("The DWIT Sports Club",
+                "DWIT Sports Club take responsibilities for all the sports activities concerning DWIT. We organize various intra-college activities and we also represent the college for different inter-college activities too. We supply sporting kits to the students. And we also encourage the students to participate in our sport events.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/50485373_2297129463902120_1071952291516383232_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=gKmPJkBe-z0AX9RX_1x&_nc_oc=AQmU-60hwP1aMpJ75eTwF5wc0XDRBsvcwL33hIFRXelldVXxBBeKvp0CvmCxdKbAdqI&_nc_ht=scontent.fbwa3-1.fna&oh=2785f8eb434acab8b007c839c0df3b2d&oe=61200626"));
+
+        clubs.add(new Club("The Hiking Club",
+                "Hike Club is one of the enthusiastic club, formed to organize college hiking events not only to explore places but to explore yourself. Since the establishment of the club, it has been able to provide wonderful hiking experience for students and college staffs. With the advice and suggestions of Mr. Surendra Adhikari, the club is able to successfully conduct many hiking events. Besides hiking, club has been able to conduct cycling, two day hiking and Hiking For Education (HIFE) successfully. Many adventurous activities are more to come.\n" +
+                        "\n" +
+                        "The Hiking Activities are posted on Everest Uncensored blog. You can visit here Everest Uncensored.",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/67203557_1203011729878558_1852672278144221184_n.png?_nc_cat=102&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=dAl66l4X2_kAX-eFS3u&_nc_ht=scontent.fbwa3-1.fna&oh=2611baa3c3c908c701f844ff51b65bd8&oe=611FA36F"));
+
+        clubs.add(new Club("The Music Club",
+                "Music club is a club aimed at making the environment of Deerwalk a much more fun and entertaining with the help of music. The club was founded in 2013 by a group of students of DWIT and has come a long way since its establishment. The club currently consists of 7 members who are great musical enthusiasts. It is a club full of creative ideas and a desire to stand out of the crowd with its unique activities.\n" +
+                        "\n" +
+                        "The club members for 2016/2017 are: Pallavi Ghimire, Awaaz Shrestha, Tejas Pant, Alon Shrestha, Osheen Shrestha, Shibesh Duwadi(Vice President) and Bishal Timalsina (President)\n" +
+                        "\n" +
+                        "The activities of the club include: Guitar Sessions, where the club shares its musical knowledge by teaching musical instruments to keen learners; Raw Rhythms, an unplugged sessions where artists can showcase their talent and provide the audience with a lovely evening; Open Mic, an open live music show where any one can come in front and sing their hearts out along with the crowd and Awaaz, an online open music competition for artists wanting to gain exposure.\n" +
+                        "\n",
+                "https://scontent.fbwa3-1.fna.fbcdn.net/v/t31.18172-8/12973564_241045039577771_193305974601857947_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=YcoekqpUt9oAX-HdQ_6&_nc_ht=scontent.fbwa3-1.fna&oh=e850a66065547336c5dcea4cdeb21fb6&oe=612146FF"));
+        Gson gson = new Gson();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(CLUBS, gson.toJson(clubs));
+        editor.commit();
     }
 
     private void initData() {
