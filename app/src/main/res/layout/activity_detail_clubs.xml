@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:scrollbars="none"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".DetailClubs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/clubName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Club Name"
+                android:textStyle="bold"
+                android:textColor="#243f8b"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/introduction"
+                android:fontFamily="serif"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_below="@id/clubName"
+                android:textSize="23sp"
+                android:textColor="#006a33" />
+
+            <TextView
+                android:id="@+id/introductionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Introduction Goes here"
+                android:textSize="17sp"
+                android:layout_below="@id/introduction"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/introductionText"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tenureRecView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/introductionText" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/clubNameTenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Club Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/clubNameTenure"
+        android:text=" | "
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tenureTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/character"
+        android:text="Date"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/clubImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/tenureTime"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/clubVision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/club_vision"
+        android:fontFamily="serif"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/clubImage"
+        android:textSize="20sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/clubVisionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clubVision"
+        android:layout_marginTop="5dp"
+        android:text="Club Vision Text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/clubMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/club_mission"
+        android:fontFamily="serif"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/clubVisionText"
+        android:textSize="20sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/clubMissionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clubMission"
+        android:layout_marginTop="5dp"
+        android:text="Club Mission Text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/mentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mentor"
+        android:fontFamily="serif"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/clubMissionText"
+        android:textSize="15sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/mentorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentor"
+        android:text="Mentor Text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/president"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="President"
+        android:fontFamily="serif"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/mentorText"
+        android:textSize="15sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/presidentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/president"
+        android:text="President Text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/vicePresident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vice President"
+        android:fontFamily="serif"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/president"
+        android:layout_below="@id/mentorText"
+        android:layout_marginStart="130dp"
+        android:textSize="15sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/vicePresidentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vicePresident"
+        android:layout_toEndOf="@id/president"
+        android:layout_marginStart="130dp"
+        android:text="Vice President Text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/members"
+        android:fontFamily="serif"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/presidentText"
+        android:textSize="20sp"
+        android:textColor="#006a33" />
+
+    <TextView
+        android:id="@+id/membersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/members"
+        android:layout_marginTop="5dp"
+        android:text="Members Text"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/membersText"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#c0c0c0"/>
+</RelativeLayout>

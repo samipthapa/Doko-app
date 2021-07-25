@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Utility {
     private static final String STUDENTS = "students";
     private static final String CLUBS = "clubs";
+    private static final String TENURE = "tenure";
     public static Utility instance;
 
     private SharedPreferences sharedPreferences;
@@ -43,6 +44,13 @@ public class Utility {
         return clubs;
     }
 
+    public ArrayList<ClubTenure> getTenures() {
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<ClubTenure>>(){}.getType();
+        ArrayList<ClubTenure> tenures = gson.fromJson(sharedPreferences.getString(TENURE, null), type);
+        return tenures;
+    }
+
     public Utility(Context context) {
         sharedPreferences = context.getSharedPreferences("alternate_db", Context.MODE_PRIVATE);
 
@@ -51,6 +59,7 @@ public class Utility {
 
         initData();
         initClubs();
+        initTenure();
     }
 
     public static synchronized Utility getInstance(Context context) {
@@ -58,6 +67,250 @@ public class Utility {
             instance = new Utility(context);
         }
         return instance;
+    }
+
+    private void initTenure() {
+        ArrayList<ClubTenure> tenures = new ArrayList<>();
+
+        //Software Club
+        tenures.add(new ClubTenure("The Software Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/24",
+                "The Software Club vision is to collaborate, plan and organize trainings, bootcamps, workshops and other coding competitions similar to Deerthon with aim to provide students a competitive environment to build up a minimum viable product using their technical and non-technical skills.",
+                "We want to provide a platform for students of DWIT to compete with other students. We also want all the students of DWIT to participate in all the events organized by the software club with the utmost excitement.",
+                "Saurav Bhandari", "Aabiskar Pandey", "Nishesh Thakuri",
+                "Amshu Upreti, Abhinav Gyawali, Neema Khati, Vardaan Khadka Chhetri, Kshitiz Shrestha, Sahil Lodha"));
+        tenures.add(new ClubTenure("The Software Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/17",
+                "The Software Club vision is to organize a healthy Inter and Intra College Hackathon and other coding competitions similar to Deerthon with aim to provide students a competitive environment to build up a minimum viable product using their technical and non-technical skills.",
+                "We want to organize a healthy coding competition in various programming languages. We also want all the students of DWIT to participate in all the events organized by the software club with the utmost excitement.",
+                "Saurav Bhandari", "Aabiskar Pandey", "Aakash Bhandari",
+                "Raman Lamichhane, Sulav Baskota, anjali neupane, Nishesh Thakuri, Reeshesh Thapa"));
+        tenures.add(new ClubTenure("The Software Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/1",
+                "The Software Club vision is to organize a healthy Inter and Intra College Hackathon and other coding competitions similar to Deerthon with aim to provide students a competitive environment to build up a minimum viable product using their technical and non-technical skills.",
+                "We want to organize a healthy coding competition in various programming languages. We also want all the students of DWIT to participate in all the events organized by the software club with the utmost excitement.",
+                "Shreyansh lodha", "Saurav Bhandari", "Rachana Banjade",
+                "No Members Added"));
+
+        //The Artistas
+        tenures.add(new ClubTenure("The Artistas", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/21",
+                "The club’s vision is to promote “Art as a stress reliever”. Art can be a great therapy for all those who are having a stressed life. So our club’s main ambition is to provide learning as well as spreading happiness through Art. Also, to acknowledge that Art cannot only be portrayed on a blank canvas, it’s a expression of human creativity, skills and imagination. So, our club will be focusing to boost and bring out the lurking Artistry.",
+                "To bring out various kinds of Art form such as: Dance, Acting, Music.\n" +
+                        "To conduct events that can bring out various students creativity.",
+                "Shrayash Shrestha", "Aakancha Thapa", "Poonam Khatri",
+                "Anurag Giri, Nandita sharma, Megna Shrestha, Ashray Baral, Nishant Pant, Avipsha Shahi"));
+        tenures.add(new ClubTenure("The Artistas", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/14",
+                "The main aim of this club is to explore the artistic creativity and potential of every interested student as well as other members of the college. The clubs equally aims to motivate students who are not well experienced or who do not have much knowledge about art to learn and explore the world of art in general. The Artistas does not want to be limited within the traditional arts, it wants to expose the students to the field of new media art by providing them with various workshops.\n",
+                "To conduct both traditional as well as digital art workshop (animation workshop, dance workshop, sketch workshop, painting workshop, crafts workshop etc.) regularly.\n" +
+                        "Expose members and other interested students to interesting art techniques.\n" +
+                        "To motivate everyone to bring out imagination inside them and help them learn and create different art forms.",
+                "Aabiskar Pandey", "Shrayash Shrestha", "Bishesh Katwal",
+                "Jessica shrestha, Poonam Khatri, Prajita Balami, Sagar Giri, Sanjeeb K.C"));
+
+        //The DeerExpress Club
+        tenures.add(new ClubTenure("The DeerExpress Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/19",
+                "The club’s main vision is to help and guide students to know their potential in public speaking, which is the freestanding ability one should strive to embody in all our interactions. Deer Express aims to provide a platform for the student to instill the qualities to express themselves without any hesitation along with, building their confidence.\n" +
+                        "\n",
+                "1)To conduct productive and fruitful sessions with active participation and involvement of students.\n" +
+                        "\n" +
+                        "2)To invite speakers from different fields so that the students are encouraged and motivated by their speech.\n",
+                "Maunta Rani Gautam","Nishad Bijukchhe", "Bijina Regmi",
+                "Apurba Deep Thapaliya, Aayam Ojha, Aishwarya Sapkota, Kripali Sharma Poudel, Sushant Timalsina, Mahima Karki"));
+        tenures.add(new ClubTenure("The DeerExpress Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/16",
+                "The club’s vision is to develop student’s potential in public speaking. DeerTalk session aims at motivating students in their career path by inviting inspiring guests. DeerExpress Season aims at providing student opportunity to express themselves without any hesitation and to build up their confidence.\n",
+                "• To conduct each session with active participation and involvement of all the students.\n" +
+                        "• To invite guests from different fields so that students get motivated from their speech",
+                "Iris Raj Pokharel", "Maunta Rani Gautam", "Nishad Bijukchhe",
+                "Aayam Ojha, Supriya Dhakal, Bijina Regmi, Simran Parajuli, Sanjay Sanjel"));
+        tenures.add(new ClubTenure("The DeerExpress Club", "2017-2018",
+                "https://doko.dwit.edu.np/clubSession/image/2",
+                "The club’s vision is to develop student’s potential in public speaking. DeerTalk session aims at motivating students in their career path by inviting inspiring guests. DeerExpress Season aims at providing student opportunity to express themselves without any hesitation and to build up their confidence.",
+                "• To conduct each session with active participation and involvement of all the students.\n" +
+                        "• To invite guests from different fields so that students get motivated from their speech.",
+                "Akankshya Upadhyay", "Iris Raj Pokharel", "Maunta Rani Gautam",
+                "No Members Added"));
+
+        //The Deerwalk Literature Society
+        tenures.add(new ClubTenure("The Deerwalk Literature Society", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/20",
+                "To develop and hone the literary skills of the students, the club inspires students to develop a taste for literature and also works in the direction of expanding their horizon of spoken and written language.",
+                "Our primary mission is to give exposure to students so that they explore the best in the field of literature. We believe that speaking, writing and way of presenting things matter most in today’s time. Thus, we would call this club is a common package including all those sorts.",
+                "Bandana Aryal", "Aayushree Sapkota", "Garima kc",
+                "Simran Parajuli, Ankit Puri, Aayush pokharel, Daxata Karki, Bhawana Yadav"));
+        tenures.add(new ClubTenure("The Deerwalk Literature Society", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/10",
+                "The Book Club wants to be top club. For that we are guided through, teaching simple reading habits of reading and writing. Also, motivating everyone to share the experience of the book club.",
+                "To develop writing skills, reading habits, interaction capabilities and critical analysis.\n",
+                "Aadesh Dhakal", "Bandana Aryal", "Aayushree Sapkota",
+                "Daxata Karki, Garima kc, Himal neupane, Kriti Ghimire, Nabin Katwal"));
+        tenures.add(new ClubTenure("The Deerwalk Literature Society", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/3",
+                "The Book Club wants to be top club. For that we are guided through, teaching simple reading habits of reading and writing. Also, motivating everyone to share the experience of the book club.",
+                "To develop writing skills, reading habits, interaction capabilities and critical analysis.",
+                "Prakriti Shree Tuladhar", "Aadesh Dhakal", "Pranjal Pandey",
+                "No Members Added"));
+
+        //The Documentary and Movie Club
+        tenures.add(new ClubTenure("The Documentary and\nMovie Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/26",
+                "The Documentry and Movies Club wants to show entertaining, inspiring movies and documentaries so that students can enjoy their time in club events. We want to be the club which listens to students, so that the students enjoy the movies we show. \n",
+                "Our club aims to make interesting short movies and documentaries to inspire students of DWIT.\n" +
+                        "\n" +
+                        "To hold open screening so that students have relaxed time after studying and working 5 days a week.\n" +
+                        "\n" +
+                        "Our club aims to cover important events such as DeerUtsav, DWIT Picnic, etc.\n" +
+                        "\n" +
+                        "Our club wants to held guess the movie sooner than later.\n",
+                "Tsering Finjo Sherpa", "Aahishma Khanal", "Swaroop Dhungana",
+                "Saman Thakuri, Pratik Khanal, Avyudaya Acharya, Suyog Pradhan, Ashim Mainali"));
+        tenures.add(new ClubTenure("The Documentary and\nMovie Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/4",
+                "The clubs wants to efficiently be able to show mind-enlightening documentaries as well as entertaining movies. Also conduct many events which are very entertaining and fun, so that every student is excited and always interested in participating in our events. We also want to be a club that resonates with the interests of the students, so that the students can relate with the club and make even more students stay back and enjoy some entertaining movies. The club also wants to conduct some movie related quiz sooner rather than later.",
+                "Studying five days a week can be very hard and monotonous to the students. So, the documentary and movie club aims to eliminate that, through the movie show to help ever student have a great start to the weekend. They can all just relax and spend some time with their friends and enjoy a movie. Students can forget all the stress and just relax for a few hours. The club also aims to show interesting and inspiring documentaries and provide some sort of information through these documentaries.\n",
+                "Abhisekh Khatiwada", "Dipal Malla", "Jubindra KC",
+                "No Members Added"));
+
+        //The DWIT News Club
+        tenures.add(new ClubTenure("The DWIT News Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/8",
+                "The club aims to turn the DWIT News site into an officially recognized e-news site. That is, it aims to improve the visit count of the site by bringing positive changes to the category and content of the articles, the look and feel of the site, and by introducing new features like video interviews, documentaries, thought-provoking pictures and so forth.\n" +
+                        "\n" +
+                        "Put Simply,\n" +
+                        "• High visit count\n" +
+                        "• High daily time on site of every reader\n" +
+                        "• Increasing comments and feedback\n",
+                "• Introduce new tweaks into the site and genre of articles periodically\n" +
+                        "• Entertain people through international and local news which are interesting but overlooked in context of Nepal\n" +
+                        "• Provide people access to not only text-based news, but also video/picture based news.",
+                "Nikita Gautam", "Sushil Awale", "Sagar Shrestha",
+                "Giriraj Khatri, Maunta Rani Gautam, Shrayash Shrestha, Aishwarya Sapkota, Samrajya Shrestha, Shreejan pandey, Shubham Joshi, Tsering Finjo Sherpa, Pallavi Ghimire"));
+
+        //The DWIT Sports Club
+        tenures.add(new ClubTenure("The DWIT Sports Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/25",
+                "Increase the participation in Inter College Tournaments and to continue with the Intra College tournaments. We try our best to give wings to the student’s sporting desires. We encourage female participation in different sports activities too. We are also looking forward to collaborate with different internal and external organizations.\n",
+                "Improve the sports situations of the college. Focusing on every sport as far as possible and conducting sporting events with active participation.\n" +
+                        "Focusing on not only intra-college events but also participating in various inter-college events and represent the college. Also, conducting various e-gaming tournaments in collaboration with Software Club.\n",
+                "Nischal Rimal", "Prashant Neupane", "Samil Shrestha",
+                "Neha Shrestha, Deena Sitikhu, Pratyush Singh, Sushovan Khanal, Bibek Khatri, Raj Sanjel"));
+        tenures.add(new ClubTenure("The DWIT Sports Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/13",
+                "DWIT Sports Club organizes various intra-college sporting activities. We try our best to give wings to the student’s sporting desire. We encourage female participation in different sport activities too. But on the other hand we also feel that we are lagging a few steps behind regarding inter-college sporting event participation. We hope to change this in near future. And we are also looking forward to organize different Inter-college competition ourselves.\n",
+                "Focusing on every sport as far as possible and conducting sporting events with active participation\n" +
+                        "Focusing on not only intra-college events but also participating in various inter-college events and represent the college.",
+                "Ashim Shrestha", "Nischal Rimal", "Biplov Khanal",
+                "Samil Shrestha, Prashant Neupane, Deena Sitikhu, Rajat Raj Joshi, David Poudel, Nishan karki"));
+        tenures.add(new ClubTenure("The DWIT Sports Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/7",
+                "DWIT Sports Club organizes various intra-college sporting activities. We try our best to give wings to the student’s sporting desire. We encourage female participation in different sport activities too. But in the other hand we also feel that we are lagging a few steps behind regarding inter-college sporting event participation. We hope to change this in near future. And we are also looking forward to organize different Inter-college competition ourselves.",
+                "Right now, we are only able to organize the regular sport events. So we plan to step out of this trend and organize all sorts of sporting events. We are looking forward to successfully run DWIT gym too.",
+                "Sushant Chitrakar", "Ashim Shrestha", "Bishal Rawal",
+                "No Members Added"));
+
+        //The Hiking Club
+        tenures.add(new ClubTenure("The Hiking Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/27",
+                "Apart from travelling to many destinations, the club is always dedicated in wellbeing through connection with nature. The activities are intended to have break from busy schedules during weekdays by nature exploration and also build communication among the DWIT family. We also focus in real life problem solving and making quick decisions during the time of need and figure out possible solutions.",
+                "To organize hike to different hiking routes around Kathamndu valley and also outside valley.\n" +
+                        "\n" +
+                        "To encourage every DWIT family member to hike and establish connection with friends and nature.\n",
+                "Aashish K.C.", "Aashish Sapkota", "Rohan Prasai",
+                "Presha Sunar, Anju Shrestha, Phanindra Nath Panta, Sairose Shrestha, Sejal Katuwal, Suraj Bogati"));
+        tenures.add(new ClubTenure("The Hiking Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/9",
+                "The hiking club wants to build leadership quality among its member and provide its members with a sense of responsibility. Hiking club also focus on team building by conducting team building activities among its hikers.",
+                "Hike Club was formed to organize college hiking events. It has been able to provide wonderful hiking experience to students and college staffs. By working with the college administration the hiking club is able to successfully conduct hiking events and adventure event. ",
+                "Prayush Shrestha", "Ayush Raj Sedhai", "Aashish K.C.",
+                "No Members Added"));
+
+        //The Media Club
+        tenures.add(new ClubTenure("The Media Club", "2020-2021",
+                "https://doko.dwit.edu.np/clubSession/image/28",
+                "Our club vision is to expand to wider audience outside of DWIT student and alumni bodies.",
+                " To capture the moments of your Deerwalk journey to make you smile when you look back to it.\n" +
+                        "To create a visual memory lane to record all the events.\n",
+                "Sagar Shrestha", "Jatin Neupane", "Apar Baral",
+                "Pratyush Acharya, Prince Raj Pandey, Kiran Parajuli, Eva Shrestha, Denisha Singh, Vasker Raj Pandey"));
+        tenures.add(new ClubTenure("The Media Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/18",
+                "The club vision is to inform students about the activites happening not only inside the college but also about the alumni. The DWIT News aims to provide contemporary information to the students.",
+                "The primary mission of the Media Club is to provide students wiht contemporary news happening to our college, alumni and society. The secondary missions are includes\n" +
+                        "\n" +
+                        "Coverage of the events happening to the college\n" +
+                        "Designing posters for the events happening in the college",
+                "Sushil Awale", "Sagar Shrestha", "Tayouth Malla",
+                "No Members Added"));
+
+        //The Music Club
+        tenures.add(new ClubTenure("The Music Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/22",
+                "As the name suggest Music Club the clubs’ vision is to help and encourage students with the music related activities and events. Various events like Musical workshops, Jam sessions, Competitions are conducted targeting to the develop and refine the skills of each students interested in the music.\n",
+                "To conduct events and sessions which will help the students to get more interested in the field of music.\n" +
+                        "\n" +
+                        "To hone the musical skills of the students.\n" +
+                        "\n" +
+                        "To encourage more students to take part in musical events and activities.",
+                "Aashish Tamang", "Shrijal Khanal", "Srijan pyakural",
+                "Aishwarya Thapa, Utsav Pokhrel, Ayush Shrestha, Prarambhika Khadka, Sudip Regmi"));
+        tenures.add(new ClubTenure("The Music Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/11",
+                "• Be able to play different instruments.\n" +
+                        "• Make other students able to play even one instrument.\n",
+                "Guitar Sessions, where the club shares its musical knowledge by teaching musical instruments to keen learners; Raw Rhythms, an unplugged sessions where artists can showcase their talent and provide the audience with a lovely evening; Open Mic, an open live music show where anyone can come in front and sing their hearts out along with the crowd and Awaaz, an online open music competition for artists wanting to gain exposure.",
+                "Alon Shrestha", "Aashish Tamang", "Samrajya Shrestha",
+                "Aayusha Paudel, Ramesh Tamang, Prarambhika Khadka, Abhishek Pandey, Utsav Pokhrel, Shrijal Khanal"));
+        tenures.add(new ClubTenure("The Music Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/6",
+                "• Be able to play different instruments.\n" +
+                        "• Make other students able to play even one instrument.",
+                "Guitar Sessions, where the club shares its musical knowledge by teaching musical instruments to keen learners; Raw Rhythms, an unplugged sessions where artists can showcase their talent and provide the audience with a lovely evening; Open Mic, an open live music show where any one can come in front and sing their hearts out along with the crowd and Awaaz, an online open music competition for artists wanting to gain exposure.",
+                "Bishal Timalsina", "Alon Shrestha", "Pallavi Ghimire",
+                "No Members Added"));
+
+        //The Social Service Club
+        tenures.add(new ClubTenure("The Social Service Club", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/29",
+                "Our club plans to be the voice of those who cannot speak for themselves. We want to bring the best possible change and contribute to the society by encouraging the students to actively participate in the club activities. ",
+                "The mission of the club is to conduct events to help those who need our help by positively impacting their lives in every possible way. We want to focus on all those small factors and events that we ignore in daily activities.",
+                "Seema Tamang", "Sanjiwani Jha", "Pradeepti Aryal",
+                "Mokshada Poudyal, Sanjana Dangol, Prayash Joshi, Avipsa Prasai, Prithvi Khawas"));
+        tenures.add(new ClubTenure("The Social Service Club", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/12",
+                "The club plans to stand out with its activities. We want to contribute as much as we can to the society. Moreover, we want to encourage the students of DWIT to get involved in social service activities and realize the responsibility towards the community.",
+                "The mission of the club is to help the society in whichever way we can; to concentrate on all those small factors which we have ignored due to various reasons but which makes a big impact in people’s life. We aim to bring everyone together for betterment, because we believe, “Together, We can.”",
+                "Kusal Bista", "Seema Tamang", "Utsav Shrestha",
+                "No Members Added"));
+        tenures.add(new ClubTenure("The Social Service Club", "2017 - 2018",
+                "https://doko.dwit.edu.np/clubSession/image/5",
+                "The club plans to stand out with its activities. We want to contribute as much as we can to the society. Moreover, we want to encourage the students of DWIT to get involved in social service activities and realize the responsibility towards the community.",
+                "The mission of the club is to help the society in whichever way we can; to concentrate on all those small factors which we have ignored due to various reasons but which makes a big impact in people’s life. We aim to bring everyone together for betterment, because we believe, “Together, We can.”",
+                "Mallika Bhattarai", "Kusal Bista", "Sunita kunwar",
+                "No Members Added"));
+
+        //The Spotlight
+        tenures.add(new ClubTenure("The Spotlight", "2020 - 2021",
+                "https://doko.dwit.edu.np/clubSession/image/23",
+                " To increase the participation of more students.\n" +
+                        "To upgrade pocast into video based podcast.\n",
+                "To upgrade the video based Talk Show to live audience.\n" +
+                        "To include techical content in podcast through Tech Talk.",
+                "Shubham Joshi", "Sujan Adhikari", "Sriya Mainali",
+                "Sanjana koirala, Nuraj Rimal, Aryama Upadhyaya, Saurav Karki, Ashwin Adhikari, Monika Dahal"));
+        tenures.add(new ClubTenure("The Spotlight", "2019 - 2020",
+                "https://doko.dwit.edu.np/clubSession/image/15",
+                "The Spotlight is an interactive media based club not only focusing on creating exciting and fun contents but also on providing opportunities for people who are willing to learn and enhance their various skills. The club focuses on improving their existing shows while adding new programmes and sessions for its audience.",
+                "‘Bringing people together’. The Spotlight has been successful in its sole aim of bringing people together whether as guests or participants in one of its various shows or as dedicated members who share this belief and bring creative ideas to life through their hard work.\n",
+                "Pallavi Ghimire", "Shubham Joshi", "Srajesh Tuladhar",
+                "Sanjana koirala, Sriya Mainali, Subekshya karki, Pradeepti Aryal, Sandesh Sapkota, Sujan Adhikari"));
+
+        Gson gson = new Gson();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(TENURE, gson.toJson(tenures));
+        editor.commit();
     }
 
     private void initClubs() {
@@ -70,7 +323,7 @@ public class Utility {
                 "The Spotlight is one of the eleven clubs in DWIT, which is engaged in conducting light-hearted programmes such as talk shows, podcasts and debates. It was started with the intention of getting to know the people we are surrounded by within the Deerwalk premises, but has expanded to guests outside Deerwalk too in about one year of its formation.",
                 "https://scontent.fbwa3-1.fna.fbcdn.net/v/t31.18172-8/29664904_929827030519995_2833987359704685416_o.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=MO0_AVY8Ja4AX9NK4ip&_nc_ht=scontent.fbwa3-1.fna&oh=6672345efff902b77bcbe5cd14fbda58&oe=6121504D"));
 
-        clubs.add(new Club("The Documentary and Movie Club",
+        clubs.add(new Club("The Documentary and\nMovie Club",
                 "The documentary and movie club’s sole aim is to be able to provide some form of entertainment as well as information to the students through movies, every two weeks and provide information through documentaries.",
                 "https://scontent.fbwa3-1.fna.fbcdn.net/v/t1.6435-9/82908911_3228476787169589_4335840678689898496_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=fSyh4ZqO524AX_rbADa&_nc_ht=scontent.fbwa3-1.fna&oh=b6ca2ac2664eb33330f620543faa2a81&oe=6121A712"));
 
@@ -697,5 +950,28 @@ public class Utility {
             }
         }
         return null;
+    }
+
+    public Club getClub(String name) {
+        ArrayList<Club> clubs = getClubs();
+        if (clubs != null) {
+            for (Club club: clubs) {
+                if (club.getName().equals(name)) {
+                    return club;
+                }
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<ClubTenure> getTenure(String clubName) {
+        ArrayList<ClubTenure> result = new ArrayList<>();
+        ArrayList<ClubTenure> tenures = getTenures();
+        for (ClubTenure t: tenures) {
+            if (t.getClubName().equals(clubName)) {
+                result.add(t);
+            }
+        }
+        return result;
     }
 }

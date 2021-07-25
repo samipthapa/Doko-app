@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
@@ -48,6 +49,7 @@ public class StudentRecyclerViewAdapter extends RecyclerView.Adapter<StudentRecy
             holder.parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Toast.makeText(context, students.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailStudentNew.class);
                     intent.putExtra("studentId", students.get(position).getId());
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -59,6 +61,7 @@ public class StudentRecyclerViewAdapter extends RecyclerView.Adapter<StudentRecy
             holder.parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Toast.makeText(context, students.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailStudentOld.class);
                     intent.putExtra("studentId", students.get(position).getId());
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

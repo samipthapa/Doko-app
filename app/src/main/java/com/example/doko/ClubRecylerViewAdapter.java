@@ -1,11 +1,14 @@
 package com.example.doko;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +18,7 @@ import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
 
-public class ClubRecylerViewAdapter extends  RecyclerView.Adapter<ClubRecylerViewAdapter.ViewHolder>{
+public class ClubRecylerViewAdapter extends RecyclerView.Adapter<ClubRecylerViewAdapter.ViewHolder>{
 
     private Context context;
     private ArrayList<Club> clubs = new ArrayList<>();
@@ -39,6 +42,16 @@ public class ClubRecylerViewAdapter extends  RecyclerView.Adapter<ClubRecylerVie
                 .asBitmap()
                 .load(clubs.get(position).getImageUrl())
                 .into(holder.clubImage);
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, clubs.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, DetailClubs.class);
+                intent.putExtra("ClubName", clubs.get(position).getName());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
