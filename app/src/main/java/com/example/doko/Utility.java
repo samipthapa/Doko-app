@@ -57,9 +57,15 @@ public class Utility {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
 
-        initData();
-        initClubs();
-        initTenure();
+        if (null == getStudents()) {
+            initData();
+        }
+        if (null == getClubs()) {
+            initClubs();
+        }
+        if (null == getTenures()) {
+            initTenure();
+        }
     }
 
     public static synchronized Utility getInstance(Context context) {

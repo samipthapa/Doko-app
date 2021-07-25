@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eeeeee"
-    android:padding="10dp"
+    android:paddingTop="10dp"
+    android:paddingHorizontal="20dp"
     android:scrollbars="none"
     tools:context=".DetailClubs">
 
